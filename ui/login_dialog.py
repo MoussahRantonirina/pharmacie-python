@@ -5,8 +5,8 @@ from db.user_dao import verify_user
 class LoginDialog:
     def __init__(self, parent):
         self.top = tk.Toplevel(parent)
-        self.top.title("Pharmacie - Connexion")
-        self.top.geometry("450x280")
+        self.top.title("Connexion")
+        self.top.geometry("450x300")
         self.top.resizable(False, False)
         self.top.config(bg="#e3f2fd")
         self.top.grab_set()
@@ -15,7 +15,7 @@ class LoginDialog:
         frame = tk.Frame(self.top, bg="#e3f2fd")
         frame.pack(expand=True, fill="both", padx=24, pady=18)
 
-        tk.Label(frame, text="Connexion", font=("Arial", 16, "bold"), bg="#e3f2fd", fg="#1976D2").pack(pady=(0, 18))
+        tk.Label(frame, text="Pharmacie - Connexion", font=("Arial", 16, "bold"), bg="#e3f2fd", fg="#1976D2").pack(pady=(0, 18))
         tk.Label(frame, text="Nom d'utilisateur :", font=("Arial", 12), bg="#e3f2fd").pack(anchor="w")
         self.entry_username = tk.Entry(frame, font=("Arial", 12), bd=2, relief="groove")
         self.entry_username.pack(pady=4, fill="x")
@@ -27,6 +27,7 @@ class LoginDialog:
 
         tk.Button(frame, text="Se connecter", width=16, bg="#1976D2", fg="white", font=("Arial", 12, "bold"),
                   relief="groove", activebackground="#1565C0", command=self.login).pack(pady=18)
+        tk.Label(frame, text="© 2025 Moussah Rantonirina. Tous droits réservés.", font=("Arial", 8), bg="#e3f2fd", fg="#999").pack(pady=(10,0))
 
     def login(self):
         username = self.entry_username.get()

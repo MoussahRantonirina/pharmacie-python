@@ -79,6 +79,7 @@ class PharmacieApp:
             font=("Arial", 10), bg="#f0f4f8", fg="#666"
         )
         legend.pack(pady=(4, 0))
+        tk.Label(root, text="© 2025 Moussah Rantonirina. Tous droits réservés.", font=("Arial", 9), bg="#f0f4f8", fg="#999").pack(pady=(4, 0))
 
         # Gestion droits
         self.apply_role_rights()
